@@ -1,0 +1,11 @@
+*.class
+*.jar
+.launch
+.settings
+.settings
+.project
+target/
+lib/
+bin/
+.checkstyle
+*/.checkstyle

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/PdfGenerator/src" modelPluginID="PdfGenerator"
+    modelName="PIMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>PIMM.ecore</foreignModel>
+  <genPackages prefix="PIMM" disposableProviderFactory="true" ecorePackage="PIMM.ecore#/">
+    <genClasses ecoreClass="PIMM.ecore#//Document">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PIMM.ecore#//Document/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PIMM.ecore#//Document/pages"/>
+    </genClasses>
+    <genClasses ecoreClass="PIMM.ecore#//Page">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PIMM.ecore#//Page/elements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="PIMM.ecore#//Element"/>
+    <genClasses ecoreClass="PIMM.ecore#//Text"/>
+    <genClasses ecoreClass="PIMM.ecore#//Table"/>
+  </genPackages>
+</genmodel:GenModel>
