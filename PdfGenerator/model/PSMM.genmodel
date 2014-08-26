@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/PdfGenerator/src" modelPluginID="PdfGenerator"
+    modelName="PSMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>PSMM.ecore</foreignModel>
+  <genPackages prefix="PSMM" disposableProviderFactory="true" ecorePackage="PSMM.ecore#/">
+    <genClasses ecoreClass="PSMM.ecore#//Document">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSMM.ecore#//Document/content"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="PSMM.ecore#//Element"/>
+    <genClasses ecoreClass="PSMM.ecore#//Text">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSMM.ecore#//Text/value"/>
+    </genClasses>
+    <genClasses ecoreClass="PSMM.ecore#//Table"/>
+    <genClasses ecoreClass="PSMM.ecore#//NewPage"/>
+  </genPackages>
+</genmodel:GenModel>

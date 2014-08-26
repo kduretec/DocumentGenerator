@@ -9,7 +9,10 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: PIMM,
  PIMM.impl,
- PIMM.util
+ PIMM.util,
+ PSMM,
+ PSMM.impl,
+ PSMM.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtend.lib,
@@ -17,5 +20,10 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.common,
  org.eclipse.emf.ecore,
- org.eclipse.emf.ecore.xmi
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.ocl;bundle-version="3.4.0",
+ org.eclipse.ocl.examples.pivot;bundle-version="3.4.1",
+ org.eclipse.ocl.ecore;bundle-version="3.3.100",
+ org.eclipse.m2m.qvt.oml,
+ org.eclipse.m2m.qvt.oml.project
 Bundle-ActivationPolicy: lazy

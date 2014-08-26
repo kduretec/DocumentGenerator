@@ -14,4 +14,12 @@
             genModel="model/PIMM.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated PSMM -->
+      <package
+            uri="http://pdf.psm.model"
+            class="PSMM.PSMMPackage"
+            genModel="model/PSMM.genmodel"/>
+   </extension>
+
 </plugin>
