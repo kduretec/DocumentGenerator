@@ -178,13 +178,22 @@ public interface PIMMPackage extends EPackage {
 	int TEXT = 3;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT__VALUE = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Text</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 0;
+	int TEXT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Text</em>' class.
@@ -298,6 +307,17 @@ public interface PIMMPackage extends EPackage {
 	EClass getText();
 
 	/**
+	 * Returns the meta object for the attribute '{@link PIMM.Text#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see PIMM.Text#getValue()
+	 * @see #getText()
+	 * @generated
+	 */
+	EAttribute getText_Value();
+
+	/**
 	 * Returns the meta object for class '{@link PIMM.Table <em>Table</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -393,6 +413,14 @@ public interface PIMMPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TEXT = eINSTANCE.getText();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT__VALUE = eINSTANCE.getText_Value();
 
 		/**
 		 * The meta object literal for the '{@link PIMM.impl.TableImpl <em>Table</em>}' class.

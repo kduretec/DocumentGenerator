@@ -11,7 +11,7 @@ package PSMM;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link PSMM.Text#getValue <em>Value</em>}</li>
+ *   <li>{@link PSMM.Text#getTextvalue <em>Textvalue</em>}</li>
  * </ul>
  * </p>
  *
@@ -21,29 +21,29 @@ package PSMM;
  */
 public interface Text extends Element {
 	/**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Textvalue</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Textvalue</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(String)
-	 * @see PSMM.PSMMPackage#getText_Value()
+	 * @return the value of the '<em>Textvalue</em>' attribute.
+	 * @see #setTextvalue(String)
+	 * @see PSMM.PSMMPackage#getText_Textvalue()
 	 * @model
 	 * @generated
 	 */
-	String getValue();
+	String getTextvalue();
 
 	/**
-	 * Sets the value of the '{@link PSMM.Text#getValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link PSMM.Text#getTextvalue <em>Textvalue</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see #getValue()
+	 * @param value the new value of the '<em>Textvalue</em>' attribute.
+	 * @see #getTextvalue()
 	 * @generated
 	 */
-	void setValue(String value);
+	void setTextvalue(String value);
 
 } // Text

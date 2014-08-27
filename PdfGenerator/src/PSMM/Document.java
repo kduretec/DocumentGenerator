@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link PSMM.Document#getContent <em>Content</em>}</li>
+ *   <li>{@link PSMM.Document#getDocname <em>Docname</em>}</li>
  * </ul>
  * </p>
  *
@@ -38,5 +39,21 @@ public interface Document extends EObject {
 	 * @generated
 	 */
 	EList<Element> getContent();
+
+	/**
+	 * Returns the value of the '<em><b>Docname</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Docname</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Docname</em>' attribute list.
+	 * @see PSMM.PSMMPackage#getDocument_Docname()
+	 * @model
+	 * @generated
+	 */
+	EList<String> getDocname();
 
 } // Document

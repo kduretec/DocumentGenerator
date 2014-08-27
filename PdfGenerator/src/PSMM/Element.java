@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  *
  * @see PSMM.PSMMPackage#getElement()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface Element extends EObject {

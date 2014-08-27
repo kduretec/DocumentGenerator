@@ -14,7 +14,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PIMM.ecore#//Page/elements"/>
     </genClasses>
     <genClasses image="false" ecoreClass="PIMM.ecore#//Element"/>
-    <genClasses ecoreClass="PIMM.ecore#//Text"/>
+    <genClasses ecoreClass="PIMM.ecore#//Text">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PIMM.ecore#//Text/value"/>
+    </genClasses>
     <genClasses ecoreClass="PIMM.ecore#//Table"/>
   </genPackages>
 </genmodel:GenModel>

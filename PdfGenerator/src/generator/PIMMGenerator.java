@@ -2,12 +2,14 @@ package generator;
 
 import java.io.IOException;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import PIMM.Document;
@@ -31,15 +33,22 @@ public class PIMMGenerator {
 		m.put("test", new XMIResourceFactoryImpl());
 		ResourceSet resSet = new ResourceSetImpl();
 		
+		Map<String, Object> opts = new HashMap<String, Object>();
+		opts.put(XMIResource.OPTION_SCHEMA_LOCATION, true);
+
 		for (int i = 0; i < 10; i++) {
 
 			Document doc = factory.createDocument();
 			doc.setName("test" + i);
 			
-			for (int j = 0; j<10; j++) {
+			for (int j = 0; j< 5 + Math.round(Math.random()*10); j++) {
 				Text txt = factory.createText();
 				Page pg = factory.createPage();
+				txt.setValue("Hello "+ j);
 				pg.getElements().add(txt);
+				Text txt2 = factory.createText();
+				txt2.setValue(j+ " Hello");
+				pg.getElements().add(txt2);
 				doc.getPages().add(pg);
 			}
 
@@ -47,9 +56,8 @@ public class PIMMGenerator {
 			Resource resource = resSet.createResource(URI
 					.createURI("PIM/test"+i+".test"));
 			resource.getContents().add(doc);
-
 			try {
-				resource.save(Collections.EMPTY_MAP);
+				resource.save(opts);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

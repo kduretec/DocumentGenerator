@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link PSMM.impl.TextImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link PSMM.impl.TextImpl#getTextvalue <em>Textvalue</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,24 +26,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class TextImpl extends ElementImpl implements Text {
 	/**
-	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * The default value of the '{@link #getTextvalue() <em>Textvalue</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #getTextvalue()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALUE_EDEFAULT = null;
+	protected static final String TEXTVALUE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * The cached value of the '{@link #getTextvalue() <em>Textvalue</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #getTextvalue()
 	 * @generated
 	 * @ordered
 	 */
-	protected String value = VALUE_EDEFAULT;
+	protected String textvalue = TEXTVALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,8 +69,8 @@ public class TextImpl extends ElementImpl implements Text {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getValue() {
-		return value;
+	public String getTextvalue() {
+		return textvalue;
 	}
 
 	/**
@@ -78,11 +78,11 @@ public class TextImpl extends ElementImpl implements Text {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(String newValue) {
-		String oldValue = value;
-		value = newValue;
+	public void setTextvalue(String newTextvalue) {
+		String oldTextvalue = textvalue;
+		textvalue = newTextvalue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PSMMPackage.TEXT__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, PSMMPackage.TEXT__TEXTVALUE, oldTextvalue, textvalue));
 	}
 
 	/**
@@ -93,8 +93,8 @@ public class TextImpl extends ElementImpl implements Text {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PSMMPackage.TEXT__VALUE:
-				return getValue();
+			case PSMMPackage.TEXT__TEXTVALUE:
+				return getTextvalue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +107,8 @@ public class TextImpl extends ElementImpl implements Text {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PSMMPackage.TEXT__VALUE:
-				setValue((String)newValue);
+			case PSMMPackage.TEXT__TEXTVALUE:
+				setTextvalue((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +122,8 @@ public class TextImpl extends ElementImpl implements Text {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PSMMPackage.TEXT__VALUE:
-				setValue(VALUE_EDEFAULT);
+			case PSMMPackage.TEXT__TEXTVALUE:
+				setTextvalue(TEXTVALUE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +137,8 @@ public class TextImpl extends ElementImpl implements Text {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PSMMPackage.TEXT__VALUE:
-				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			case PSMMPackage.TEXT__TEXTVALUE:
+				return TEXTVALUE_EDEFAULT == null ? textvalue != null : !TEXTVALUE_EDEFAULT.equals(textvalue);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,8 +153,8 @@ public class TextImpl extends ElementImpl implements Text {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (value: ");
-		result.append(value);
+		result.append(" (textvalue: ");
+		result.append(textvalue);
 		result.append(')');
 		return result.toString();
 	}

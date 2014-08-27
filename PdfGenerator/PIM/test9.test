@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="ASCII"?>
-<pimm:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pimm="http://pdf.pim.model" name="test9">
+<pimm:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pimm="http://pdf.pim.model" xsi:schemaLocation="http://pdf.pim.model ../model/PIMM.ecore" name="test9">
   <pages>
-    <elements xsi:type="pimm:Text"/>
+    <elements xsi:type="pimm:Text" value="Hello 0"/>
+    <elements xsi:type="pimm:Text" value="0 Hello"/>
   </pages>
   <pages>
-    <elements xsi:type="pimm:Text"/>
+    <elements xsi:type="pimm:Text" value="Hello 1"/>
+    <elements xsi:type="pimm:Text" value="1 Hello"/>
   </pages>
   <pages>
-    <elements xsi:type="pimm:Text"/>
+    <elements xsi:type="pimm:Text" value="Hello 2"/>
+    <elements xsi:type="pimm:Text" value="2 Hello"/>
   </pages>
   <pages>
-    <elements xsi:type="pimm:Text"/>
+    <elements xsi:type="pimm:Text" value="Hello 3"/>
+    <elements xsi:type="pimm:Text" value="3 Hello"/>
   </pages>
   <pages>
-    <elements xsi:type="pimm:Text"/>
+    <elements xsi:type="pimm:Text" value="Hello 4"/>
+    <elements xsi:type="pimm:Text" value="4 Hello"/>
   </pages>
   <pages>
-    <elements xsi:type="pimm:Text"/>
-  </pages>
-  <pages>
-    <elements xsi:type="pimm:Text"/>
-  </pages>
-  <pages>
-    <elements xsi:type="pimm:Text"/>
-  </pages>
-  <pages>
-    <elements xsi:type="pimm:Text"/>
-  </pages>
-  <pages>
-    <elements xsi:type="pimm:Text"/>
+    <elements xsi:type="pimm:Text" value="Hello 5"/>
+    <elements xsi:type="pimm:Text" value="5 Hello"/>
   </pages>
 </pimm:Document>

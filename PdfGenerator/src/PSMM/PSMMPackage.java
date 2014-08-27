@@ -76,13 +76,22 @@ public interface PSMMPackage extends EPackage {
 	int DOCUMENT__CONTENT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Docname</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT__DOCNAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Document</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOCUMENT_FEATURE_COUNT = 1;
+	int DOCUMENT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Document</em>' class.
@@ -132,13 +141,13 @@ public interface PSMMPackage extends EPackage {
 	int TEXT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Textvalue</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT__VALUE = ELEMENT_FEATURE_COUNT + 0;
+	int TEXT__TEXTVALUE = ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Text</em>' class.
@@ -237,6 +246,17 @@ public interface PSMMPackage extends EPackage {
 	EReference getDocument_Content();
 
 	/**
+	 * Returns the meta object for the attribute list '{@link PSMM.Document#getDocname <em>Docname</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Docname</em>'.
+	 * @see PSMM.Document#getDocname()
+	 * @see #getDocument()
+	 * @generated
+	 */
+	EAttribute getDocument_Docname();
+
+	/**
 	 * Returns the meta object for class '{@link PSMM.Element <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -257,15 +277,15 @@ public interface PSMMPackage extends EPackage {
 	EClass getText();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PSMM.Text#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link PSMM.Text#getTextvalue <em>Textvalue</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see PSMM.Text#getValue()
+	 * @return the meta object for the attribute '<em>Textvalue</em>'.
+	 * @see PSMM.Text#getTextvalue()
 	 * @see #getText()
 	 * @generated
 	 */
-	EAttribute getText_Value();
+	EAttribute getText_Textvalue();
 
 	/**
 	 * Returns the meta object for class '{@link PSMM.Table <em>Table</em>}'.
@@ -329,6 +349,14 @@ public interface PSMMPackage extends EPackage {
 		EReference DOCUMENT__CONTENT = eINSTANCE.getDocument_Content();
 
 		/**
+		 * The meta object literal for the '<em><b>Docname</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DOCUMENT__DOCNAME = eINSTANCE.getDocument_Docname();
+
+		/**
 		 * The meta object literal for the '{@link PSMM.impl.ElementImpl <em>Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -349,12 +377,12 @@ public interface PSMMPackage extends EPackage {
 		EClass TEXT = eINSTANCE.getText();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Textvalue</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TEXT__VALUE = eINSTANCE.getText_Value();
+		EAttribute TEXT__TEXTVALUE = eINSTANCE.getText_Textvalue();
 
 		/**
 		 * The meta object literal for the '{@link PSMM.impl.TableImpl <em>Table</em>}' class.

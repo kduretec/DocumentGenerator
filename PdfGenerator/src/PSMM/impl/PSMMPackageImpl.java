@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.emf.ecore.resource.Resource;
 
 /**
  * <!-- begin-user-doc -->
@@ -143,6 +143,15 @@ public class PSMMPackageImpl extends EPackageImpl implements PSMMPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDocument_Docname() {
+		return (EAttribute)documentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getElement() {
 		return elementEClass;
 	}
@@ -161,7 +170,7 @@ public class PSMMPackageImpl extends EPackageImpl implements PSMMPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getText_Value() {
+	public EAttribute getText_Textvalue() {
 		return (EAttribute)textEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -213,11 +222,12 @@ public class PSMMPackageImpl extends EPackageImpl implements PSMMPackage {
 		// Create classes and their features
 		documentEClass = createEClass(DOCUMENT);
 		createEReference(documentEClass, DOCUMENT__CONTENT);
+		createEAttribute(documentEClass, DOCUMENT__DOCNAME);
 
 		elementEClass = createEClass(ELEMENT);
 
 		textEClass = createEClass(TEXT);
-		createEAttribute(textEClass, TEXT__VALUE);
+		createEAttribute(textEClass, TEXT__TEXTVALUE);
 
 		tableEClass = createEClass(TABLE);
 
@@ -259,11 +269,12 @@ public class PSMMPackageImpl extends EPackageImpl implements PSMMPackage {
 		// Initialize classes, features, and operations; add parameters
 		initEClass(documentEClass, Document.class, "Document", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDocument_Content(), this.getElement(), null, "content", null, 0, -1, Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDocument_Docname(), ecorePackage.getEString(), "docname", null, 0, -1, Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(elementEClass, Element.class, "Element", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(textEClass, Text.class, "Text", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getText_Value(), ecorePackage.getEString(), "value", null, 0, 1, Text.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getText_Textvalue(), ecorePackage.getEString(), "textvalue", null, 0, 1, Text.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -271,6 +282,14 @@ public class PSMMPackageImpl extends EPackageImpl implements PSMMPackage {
 
 		// Create resource
 		createResource(eNS_URI);
+	}
+	
+	/**
+	 *  override to enable adding schema 
+	 */
+	@Override
+	protected Resource createResource(String uri) {
+		return super.createResource("../model/PSMM.ecore");
 	}
 
 } //PSMMPackageImpl

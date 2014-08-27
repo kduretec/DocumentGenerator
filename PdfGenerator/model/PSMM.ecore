@@ -4,10 +4,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="Document">
     <eStructuralFeatures xsi:type="ecore:EReference" name="content" upperBound="-1"
         eType="#//Element" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="docname" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Element"/>
   <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//Element">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="textvalue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Table" eSuperTypes="#//Element"/>
   <eClassifiers xsi:type="ecore:EClass" name="NewPage" eSuperTypes="#//Element"/>

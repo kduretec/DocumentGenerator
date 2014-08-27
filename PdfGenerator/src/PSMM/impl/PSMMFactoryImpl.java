@@ -57,6 +57,7 @@ public class PSMMFactoryImpl extends EFactoryImpl implements PSMMFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case PSMMPackage.DOCUMENT: return createDocument();
+			case PSMMPackage.ELEMENT: return createElement();
 			case PSMMPackage.TEXT: return createText();
 			case PSMMPackage.TABLE: return createTable();
 			case PSMMPackage.NEW_PAGE: return createNewPage();
@@ -73,6 +74,16 @@ public class PSMMFactoryImpl extends EFactoryImpl implements PSMMFactory {
 	public Document createDocument() {
 		DocumentImpl document = new DocumentImpl();
 		return document;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Element createElement() {
+		ElementImpl element = new ElementImpl();
+		return element;
 	}
 
 	/**

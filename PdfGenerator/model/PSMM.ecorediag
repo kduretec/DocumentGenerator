@@ -3,6 +3,10 @@
   <children xmi:type="notation:Node" xmi:id="_ZHjn4C0BEeSzpYXZgJN_Ig" type="1001">
     <children xmi:type="notation:Node" xmi:id="_ZHldEC0BEeSzpYXZgJN_Ig" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_ZHmrMC0BEeSzpYXZgJN_Ig" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_oS0AIC28EeSMmLWH47rSJg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="PSMM.ecore#//Document/docname"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oS0AIS28EeSMmLWH47rSJg"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_ZHmrMS0BEeSzpYXZgJN_Ig"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_ZHmrMi0BEeSzpYXZgJN_Ig"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_ZHmrMy0BEeSzpYXZgJN_Ig"/>
@@ -36,7 +40,7 @@
     <children xmi:type="notation:Node" xmi:id="_9Q2U0C0CEeSzpYXZgJN_Ig" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_9Q2U0S0CEeSzpYXZgJN_Ig" type="5001">
       <children xmi:type="notation:Node" xmi:id="_IWi24C0DEeSzpYXZgJN_Ig" type="2001">
-        <element xmi:type="ecore:EAttribute" href="PSMM.ecore#//Text/value"/>
+        <element xmi:type="ecore:EAttribute" href="PSMM.ecore#//Text/textvalue"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_IWi24S0DEeSzpYXZgJN_Ig"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_9Q2U0i0CEeSzpYXZgJN_Ig"/>
@@ -109,7 +113,7 @@
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_DykVYC0DEeSzpYXZgJN_Ig" type="3002" source="_ZHjn4C0BEeSzpYXZgJN_Ig" target="_8MIvgC0CEeSzpYXZgJN_Ig">
     <children xmi:type="notation:Node" xmi:id="_DyljgC0DEeSzpYXZgJN_Ig" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_DyljgS0DEeSzpYXZgJN_Ig" x="-10" y="-10"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_DyljgS0DEeSzpYXZgJN_Ig" x="-21" y="-31"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_DymKkC0DEeSzpYXZgJN_Ig" type="4012">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_DymKkS0DEeSzpYXZgJN_Ig" x="10" y="10"/>

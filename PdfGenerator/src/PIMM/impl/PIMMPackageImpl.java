@@ -2,6 +2,13 @@
  */
 package PIMM.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.emf.ecore.resource.Resource;
+
 import PIMM.Document;
 import PIMM.Element;
 import PIMM.PIMMFactory;
@@ -9,13 +16,6 @@ import PIMM.PIMMPackage;
 import PIMM.Page;
 import PIMM.Table;
 import PIMM.Text;
-
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-
-import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -188,6 +188,15 @@ public class PIMMPackageImpl extends EPackageImpl implements PIMMPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getText_Value() {
+		return (EAttribute)textEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTable() {
 		return tableEClass;
 	}
@@ -230,6 +239,7 @@ public class PIMMPackageImpl extends EPackageImpl implements PIMMPackage {
 		elementEClass = createEClass(ELEMENT);
 
 		textEClass = createEClass(TEXT);
+		createEAttribute(textEClass, TEXT__VALUE);
 
 		tableEClass = createEClass(TABLE);
 	}
@@ -273,14 +283,23 @@ public class PIMMPackageImpl extends EPackageImpl implements PIMMPackage {
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPage_Elements(), this.getElement(), null, "elements", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(elementEClass, Element.class, "Element", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(textEClass, Text.class, "Text", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getText_Value(), ecorePackage.getEString(), "value", null, 0, 1, Text.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
+	}
+	
+	/**
+	 *  override to enable adding schema 
+	 */
+	@Override
+	protected Resource createResource(String uri) {
+		return super.createResource("../model/PIMM.ecore");
 	}
 
 } //PIMMPackageImpl

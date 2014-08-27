@@ -58,6 +58,7 @@ public class PIMMFactoryImpl extends EFactoryImpl implements PIMMFactory {
 		switch (eClass.getClassifierID()) {
 			case PIMMPackage.DOCUMENT: return createDocument();
 			case PIMMPackage.PAGE: return createPage();
+			case PIMMPackage.ELEMENT: return createElement();
 			case PIMMPackage.TEXT: return createText();
 			case PIMMPackage.TABLE: return createTable();
 			default:
@@ -83,6 +84,16 @@ public class PIMMFactoryImpl extends EFactoryImpl implements PIMMFactory {
 	public Page createPage() {
 		PageImpl page = new PageImpl();
 		return page;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Element createElement() {
+		ElementImpl element = new ElementImpl();
+		return element;
 	}
 
 	/**

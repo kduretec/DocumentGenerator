@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<psmm:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:psmm="http://pdf.psm.model" xsi:schemaLocation="http://pdf.psm.model ../model/PSMM.ecore">
+  <content xsi:type="psmm:Text" textvalue="Hello 0"/>
+  <content xsi:type="psmm:Text" textvalue="0 Hello"/>
+  <content xsi:type="psmm:NewPage"/>
+  <content xsi:type="psmm:Text" textvalue="Hello 1"/>
+  <content xsi:type="psmm:Text" textvalue="1 Hello"/>
+  <content xsi:type="psmm:NewPage"/>
+  <content xsi:type="psmm:Text" textvalue="Hello 2"/>
+  <content xsi:type="psmm:Text" textvalue="2 Hello"/>
+  <content xsi:type="psmm:NewPage"/>
+  <content xsi:type="psmm:Text" textvalue="Hello 3"/>
+  <content xsi:type="psmm:Text" textvalue="3 Hello"/>
+  <content xsi:type="psmm:NewPage"/>
+  <content xsi:type="psmm:Text" textvalue="Hello 4"/>
+  <content xsi:type="psmm:Text" textvalue="4 Hello"/>
+  <content xsi:type="psmm:NewPage"/>
+  <content xsi:type="psmm:Text" textvalue="Hello 5"/>
+  <content xsi:type="psmm:Text" textvalue="5 Hello"/>
+  <content xsi:type="psmm:NewPage"/>
+  <docname>test6</docname>
+</psmm:Document>

@@ -8,10 +8,11 @@
   <genPackages prefix="PSMM" disposableProviderFactory="true" ecorePackage="PSMM.ecore#/">
     <genClasses ecoreClass="PSMM.ecore#//Document">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSMM.ecore#//Document/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSMM.ecore#//Document/docname"/>
     </genClasses>
     <genClasses image="false" ecoreClass="PSMM.ecore#//Element"/>
     <genClasses ecoreClass="PSMM.ecore#//Text">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSMM.ecore#//Text/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSMM.ecore#//Text/textvalue"/>
     </genClasses>
     <genClasses ecoreClass="PSMM.ecore#//Table"/>
     <genClasses ecoreClass="PSMM.ecore#//NewPage"/>
