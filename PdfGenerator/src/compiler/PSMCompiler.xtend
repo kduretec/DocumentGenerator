@@ -15,12 +15,16 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
+import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowComponent
+import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 
-class PSMCompiler {
-	def static void main(String[] args) {
-
-		var PSMCompiler com = new PSMCompiler();
-		com.run()
+class PSMCompiler implements IWorkflowComponent{
+	
+	def void main() {
+	
+		println("Starting code generation");
+		run()
+		println("Code generation done");
 	}
 
 	def run() {
@@ -38,7 +42,7 @@ class PSMCompiler {
 			var resource = resSet.getResource(URI::createURI("PSM/" + name + ".psm"), true)
 			for (e : resource.allContents.toIterable.filter(typeof(Document))) {
 				var temp = compileDocument(e)
-				println(temp)
+				//println(temp)
 				bw.write(temp.toString)
 			}
 			bw.close()
@@ -81,4 +85,17 @@ class PSMCompiler {
 		'''
 		return temp 
 	}
+	
+	override invoke(IWorkflowContext ctx) {
+		main();
+	}
+	
+	override postInvoke() {
+		//throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+	
+	override preInvoke() {
+		//throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+	
 }

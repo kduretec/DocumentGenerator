@@ -30,11 +30,5 @@
   <content xsi:type="psmm:Text" textvalue="Hello 9"/>
   <content xsi:type="psmm:Text" textvalue="9 Hello"/>
   <content xsi:type="psmm:NewPage"/>
-  <content xsi:type="psmm:Text" textvalue="Hello 10"/>
-  <content xsi:type="psmm:Text" textvalue="10 Hello"/>
-  <content xsi:type="psmm:NewPage"/>
-  <content xsi:type="psmm:Text" textvalue="Hello 11"/>
-  <content xsi:type="psmm:Text" textvalue="11 Hello"/>
-  <content xsi:type="psmm:NewPage"/>
   <docname>test5</docname>
 </psmm:Document>

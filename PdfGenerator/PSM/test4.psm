@@ -21,17 +21,5 @@
   <content xsi:type="psmm:Text" textvalue="Hello 6"/>
   <content xsi:type="psmm:Text" textvalue="6 Hello"/>
   <content xsi:type="psmm:NewPage"/>
-  <content xsi:type="psmm:Text" textvalue="Hello 7"/>
-  <content xsi:type="psmm:Text" textvalue="7 Hello"/>
-  <content xsi:type="psmm:NewPage"/>
-  <content xsi:type="psmm:Text" textvalue="Hello 8"/>
-  <content xsi:type="psmm:Text" textvalue="8 Hello"/>
-  <content xsi:type="psmm:NewPage"/>
-  <content xsi:type="psmm:Text" textvalue="Hello 9"/>
-  <content xsi:type="psmm:Text" textvalue="9 Hello"/>
-  <content xsi:type="psmm:NewPage"/>
-  <content xsi:type="psmm:Text" textvalue="Hello 10"/>
-  <content xsi:type="psmm:Text" textvalue="10 Hello"/>
-  <content xsi:type="psmm:NewPage"/>
   <docname>test4</docname>
 </psmm:Document>

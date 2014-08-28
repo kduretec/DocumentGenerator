@@ -17,6 +17,8 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowComponent;
+import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext;
 import org.eclipse.m2m.qvt.oml.BasicModelExtent;
 import org.eclipse.m2m.qvt.oml.ExecutionContextImpl;
 import org.eclipse.m2m.qvt.oml.ExecutionDiagnostic;
@@ -26,9 +28,10 @@ import org.eclipse.m2m.qvt.oml.TransformationExecutor;
 import PIMM.PIMMPackage;
 import PSMM.PSMMPackage;
 
-public class QVTTranformationCaller {
+public class QVTTranformationCaller implements IWorkflowComponent{
 
-	public static void main(String[] args) {
+	public void main() {
+		System.out.println("Starting transformations");
 		// Refer to an existing transformation via URI
 		URI transformationURI = URI
 				.createURI("file://home/kresimir/Projects/AGEP/workspace/Transformation/transforms/Transformation.qvto");
@@ -100,6 +103,25 @@ public class QVTTranformationCaller {
 				}
 			}
 		}
+		System.out.println("Transformations done");
+	}
+
+	@Override
+	public void preInvoke() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void invoke(IWorkflowContext ctx) {
+		main();
+		
+	}
+
+	@Override
+	public void postInvoke() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

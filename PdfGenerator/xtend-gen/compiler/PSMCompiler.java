@@ -19,16 +19,19 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowComponent;
+import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.InputOutput;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 @SuppressWarnings("all")
-public class PSMCompiler {
-  public static void main(final String[] args) {
-    PSMCompiler com = new PSMCompiler();
-    com.run();
+public class PSMCompiler implements IWorkflowComponent {
+  public void main() {
+    InputOutput.<String>println("Starting code generation");
+    this.run();
+    InputOutput.<String>println("Code generation done");
   }
   
   public void run() {
@@ -53,7 +56,6 @@ public class PSMCompiler {
           for (final Document e : _filter) {
             {
               CharSequence temp = this.compileDocument(e);
-              InputOutput.<CharSequence>println(temp);
               String _string = temp.toString();
               bw.write(_string);
             }
@@ -131,5 +133,15 @@ public class PSMCompiler {
     _builder.newLine();
     String temp = _builder.toString();
     return temp;
+  }
+  
+  public void invoke(final IWorkflowContext ctx) {
+    this.main();
+  }
+  
+  public void postInvoke() {
+  }
+  
+  public void preInvoke() {
   }
 }

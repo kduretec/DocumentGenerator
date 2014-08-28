@@ -3,10 +3,14 @@ package latexcaller;
 import java.io.File;
 import java.io.IOException;
 
-public class LatexCaller {
+import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowComponent;
+import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext;
 
-	public static void main(String[] args) {
+public class LatexCaller implements IWorkflowComponent{
 
+	public void main() {
+
+		System.out.println("Compiling PDFs");
 		for (int i = 0; i < 10; i++) {
 			// Runtime rt = Runtime.getRuntime();
 			String name = "test" + i;
@@ -14,7 +18,7 @@ public class LatexCaller {
 			ProcessBuilder pb = new ProcessBuilder();
 			File f = new File(
 					"/home/kresimir/Projects/AGEP/DocumentGenerator/PdfGenerator/latex");
-			if (f.exists()) System.out.println("EXISTS");
+			//if (f.exists()) System.out.println("EXISTS");
 			pb.directory(f);
 			//System.out.println(pb.environment());
 			try {
@@ -27,7 +31,7 @@ public class LatexCaller {
 					e1.printStackTrace();
 				}
 				try {
-					Thread.sleep(4000);
+					Thread.sleep(1000);
 				} catch (InterruptedException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -64,8 +68,27 @@ public class LatexCaller {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println(name + " done");
+			//System.out.println(name + " done");
 
 		}
+		System.out.println("Done compiling PDFs");
+	}
+
+	@Override
+	public void preInvoke() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void invoke(IWorkflowContext ctx) {
+		main();
+		
+	}
+
+	@Override
+	public void postInvoke() {
+		// TODO Auto-generated method stub
+		
 	}
 }

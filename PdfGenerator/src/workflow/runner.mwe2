@@ -1,0 +1,9 @@
+module workflow.runner
+
+Workflow {
+	component = generator.PIMMGenerator {}
+	component = groundtruth.ocl.Evaluator {}
+	component = transformator.QVTTranformationCaller {}	
+	component = compiler.PSMCompiler {}
+	component = latexcaller.LatexCaller {}
+}

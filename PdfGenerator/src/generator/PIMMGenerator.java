@@ -1,7 +1,6 @@
 package generator;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,6 +10,8 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowComponent;
+import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext;
 
 import PIMM.Document;
 import PIMM.PIMMFactory;
@@ -19,10 +20,12 @@ import PIMM.Page;
 import PIMM.Text;
 import PIMM.impl.PIMMFactoryImpl;
 
-public class PIMMGenerator {
+public class PIMMGenerator implements IWorkflowComponent {
 
-	public static void main(String[] args) {
-
+	public void main() {
+		
+		System.out.println("Starting to generate PIMs");
+		
 		PIMMPackage.eINSTANCE.eClass();
 
 		PIMMFactory factory = PIMMFactoryImpl.eINSTANCE;
@@ -63,5 +66,24 @@ public class PIMMGenerator {
 				e.printStackTrace();
 			}
 		}
+		System.out.println("Done generating PIMs");
+	}
+
+	@Override
+	public void preInvoke() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void invoke(IWorkflowContext ctx) {
+		main();
+		
+	}
+
+	@Override
+	public void postInvoke() {
+		// TODO Auto-generated method stub
+		
 	}
 }
