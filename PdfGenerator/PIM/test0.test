@@ -32,4 +32,8 @@
     <elements xsi:type="pimm:Text" value="Hello 7"/>
     <elements xsi:type="pimm:Text" value="7 Hello"/>
   </pages>
+  <pages>
+    <elements xsi:type="pimm:Text" value="Hello 8"/>
+    <elements xsi:type="pimm:Text" value="8 Hello"/>
+  </pages>
 </pimm:Document>

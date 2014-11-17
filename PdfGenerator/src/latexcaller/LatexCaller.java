@@ -17,7 +17,7 @@ public class LatexCaller implements IWorkflowComponent{
 			// Process pr;
 			ProcessBuilder pb = new ProcessBuilder();
 			File f = new File(
-					"/home/kresimir/Projects/AGEP/DocumentGenerator/PdfGenerator/latex");
+					"/home/kresimir/Projects/DocumentGenerator/DocumentGenerator/PdfGenerator/latex");
 			//if (f.exists()) System.out.println("EXISTS");
 			pb.directory(f);
 			//System.out.println(pb.environment());

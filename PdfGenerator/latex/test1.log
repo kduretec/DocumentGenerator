@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.4.11)  28 AUG 2014 11:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.10.29)  12 NOV 2014 14:25
 entering extended mode
+ restricted \write18 enabled.
  %&-line parsing enabled.
 ** test1.tex
 (./test1.tex
-LaTeX2e <2009/09/24>
-Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, loaded.
-(/usr/share/texmf-texlive/tex/latex/base/article.cls
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texmf-texlive/tex/latex/base/size12.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -40,14 +40,14 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
 [1
 
-] [2] [3] [4] [5] [6] [7] (./test1.aux) ) 
+] [2] [3] [4] [5] [6] (./test1.aux) ) 
 Here is how much of TeX's memory you used:
- 200 strings out of 495062
- 2105 string characters out of 1182644
- 46097 words of memory out of 3000000
- 3465 multiletter control sequences out of 15000+50000
- 3938 words of font info for 15 fonts, out of 3000000 for 9000
- 28 hyphenation exceptions out of 8191
- 22i,4n,19p,153b,107s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 200 strings out of 495029
+ 2125 string characters out of 6181522
+ 46950 words of memory out of 5000000
+ 3498 multiletter control sequences out of 15000+600000
+ 3938 words of font info for 15 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 22i,4n,19p,153b,107s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on test1.dvi (7 pages, 872 bytes).
+Output written on test1.dvi (6 pages, 768 bytes).

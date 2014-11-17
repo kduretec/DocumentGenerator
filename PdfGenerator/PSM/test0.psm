@@ -24,5 +24,8 @@
   <content xsi:type="psmm:Text" textvalue="Hello 7"/>
   <content xsi:type="psmm:Text" textvalue="7 Hello"/>
   <content xsi:type="psmm:NewPage"/>
+  <content xsi:type="psmm:Text" textvalue="Hello 8"/>
+  <content xsi:type="psmm:Text" textvalue="8 Hello"/>
+  <content xsi:type="psmm:NewPage"/>
   <docname>test0</docname>
 </psmm:Document>

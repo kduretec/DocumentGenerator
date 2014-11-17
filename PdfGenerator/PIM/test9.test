@@ -24,12 +24,4 @@
     <elements xsi:type="pimm:Text" value="Hello 5"/>
     <elements xsi:type="pimm:Text" value="5 Hello"/>
   </pages>
-  <pages>
-    <elements xsi:type="pimm:Text" value="Hello 6"/>
-    <elements xsi:type="pimm:Text" value="6 Hello"/>
-  </pages>
-  <pages>
-    <elements xsi:type="pimm:Text" value="Hello 7"/>
-    <elements xsi:type="pimm:Text" value="7 Hello"/>
-  </pages>
 </pimm:Document>

@@ -1,0 +1,30 @@
+modeltype PIM_Source uses PIMM('http://pdf.pim.model');
+modeltype PSM_Target uses PSMM('http://pdf.psm.model');
+
+transformation PIM2PSM(in Source:PIM_Source, out Target:PSM_Target);
+
+main() {
+ Source.rootObjects()[Document].map DocumentToDocument();
+}
+
+mapping PIMM::Document::DocumentToDocument() : PSMM::Document {
+	docname := self.name;
+	self.pages->forEach(p) {
+		p->map PageToElement(result);
+	}           
+}
+
+
+
+mapping PIMM::Element::ElementToElement() : PSMM::Element
+disjuncts PIMM::Text::TextToText {}
+
+mapping PIMM::Page::PageToElement(inout doc:PSMM::Document)  {
+	doc.content += self.elements->map ElementToElement();
+	doc.content += object NewPage{};
+}
+
+mapping PIMM::Text::TextToText():PSMM::Text {
+	textvalue := self.value
+}
+

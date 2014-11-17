@@ -34,7 +34,7 @@ public class QVTTranformationCaller implements IWorkflowComponent{
 		System.out.println("Starting transformations");
 		// Refer to an existing transformation via URI
 		URI transformationURI = URI
-				.createURI("file://home/kresimir/Projects/AGEP/workspace/Transformation/transforms/Transformation.qvto");
+				.createURI("file://home/kresimir/Projects/DocumentGenerator/DocumentGenerator/Transformation/transforms/Transformation.qvto");
 		// create executor for the given transformation
 		TransformationExecutor executor = new TransformationExecutor(
 				transformationURI);
